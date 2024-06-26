@@ -13,4 +13,5 @@ import java.lang.annotation.Target;
 public @interface LikelyFail {
     String[] profiles() default {};
     Class<? extends Throwable>[] exceptions() default {SimulatedRuntimeException.class, SimulatedTimeoutException.class};
+    double failureRate() default 0.5;
 }

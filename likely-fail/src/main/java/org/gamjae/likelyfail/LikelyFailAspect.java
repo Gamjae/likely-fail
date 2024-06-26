@@ -12,7 +12,7 @@ import java.util.List;
 public class LikelyFailAspect {
     @Around("@annotation(likelyFail)")
     public Object simulateFailure(ProceedingJoinPoint joinPoint, LikelyFail likelyFail) throws Throwable {
-        if (profileMatches(likelyFail) && willFail()) {
+        if (profileMatches(likelyFail) && willFail(likelyFail.failureRate())) {
             throwRandomException(likelyFail);
         }
 
@@ -42,8 +42,8 @@ public class LikelyFailAspect {
         return false;
     }
 
-    private boolean willFail() {
-        return Math.random() < 0.5;
+    private boolean willFail(double failureRate) {
+        return Math.random() < failureRate;
     }
 
     private boolean matchesProfile(String profile, List<String> activeProfiles) {
