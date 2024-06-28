@@ -1,4 +1,4 @@
-package org.gamjae.likelyfail.exceptions;
+package org.gamjae.makitfail.exceptions;
 
 import java.util.concurrent.TimeoutException;
 

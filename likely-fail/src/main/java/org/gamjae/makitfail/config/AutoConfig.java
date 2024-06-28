@@ -1,9 +1,9 @@
-package org.gamjae.likelyfail.config;
+package org.gamjae.makitfail.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("org.gamjae.likelyfail")
+@ComponentScan("org.gamjae.makitfail")
 public class AutoConfig {
 }

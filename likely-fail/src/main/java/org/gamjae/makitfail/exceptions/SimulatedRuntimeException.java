@@ -1,4 +1,4 @@
-package org.gamjae.likelyfail.exceptions;
+package org.gamjae.makitfail.exceptions;
 
 public class SimulatedRuntimeException extends RuntimeException {
     public SimulatedRuntimeException() {
